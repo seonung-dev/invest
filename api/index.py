@@ -1292,7 +1292,7 @@ def index():
 
         function formatCurrency(amount) {
             if (isUSD) {
-                return ' + amount.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                return '$' + amount.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
             } else {
                 const roundedAmount = Math.ceil(amount / 10) * 10;
                 return roundedAmount.toLocaleString('ko-KR') + '원';
